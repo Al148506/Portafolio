@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #1b1b32;
+  --secondary-color: #343a40;
+  --accent-color: rgb(13, 110, 253);
+  --background-light: #f5f6f7;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
 .navbar {
   transition: all 0.3s ease-in-out;
   background-color: #343a40;
@@ -22,13 +31,22 @@ section {
  font-family: "Press Start 2P", serif;
 }
 
-.section-text {
-  font-size: 1.2rem;
-}
 h1 {
   font-size: 2.5rem;
   font-family: "Press Start 2P", serif;
 }
+
+.section-text {
+  font-size: 1.2rem;
+}
+
+.section-description{
+  font-size: 1.2rem;
+  color: #584e4e;
+}
+
+
+
 .dark-text{
   color: black;
 }
@@ -36,26 +54,22 @@ h1 {
   color: white;
 }
 
-.btn_more_projects{
+/* .btn_more_projects{
   font-size: 1.1rem;
   margin-bottom: 100px;
   padding: 10px 20px;
-}
-.dark-section{
-  background-color: #1b1b32;
-  color: #fff;
-  padding: 2rem;
-}
-.light-section{
-  background-color: white;
-  color: black;
-  padding: 2rem;
+} */
+
+.dark-section {
+  background-color: var(--primary-color);
+  color: var(--text-light);
 }
 
-.section-description{
-  font-size: 1.2rem;
-  color: #584e4e;
+.light-section {
+  background-color: var(--background-light);
+  color: var(--text-dark);
 }
+
 /*Section Hero*/
 .hero{
   background-color: #f5f6f7;
@@ -134,21 +148,61 @@ h1 {
   border-radius: 50%;
 }
 /*Section Projects*/
-.recent-projects{
-  padding: 40px;
+/* Estilos para figcaption */
+figcaption {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Altura fija */
+  padding: 10px; /* Espaciado interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  color: white; /* Color del texto */
+  text-align: center;
+  font-size: 1rem; /* Tamaño de fuente */
+  border-radius: 10px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+.recent-projects {
+  padding: 60px 20px;
+  background-color: white;
+  margin-bottom: 200px;
 }
 
-.recent-projects img{
-  height: 100%;
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  display: block;
-  transition: all 0.3s ease;
+.recent-projects .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
 }
-.recent-projects .container{
-  padding-top: 60px;
+
+.recent-projects .section-description {
+  font-size: 1.2rem;
+  color: #666;
   margin-bottom: 40px;
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit:fill;
+}
+.recent-projects .container {
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .overlay{
@@ -160,31 +214,50 @@ h1 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.project{
-  position: relative;
-}
-.overlay p{
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 0;
-}
 
-.overlay .icons-container{
-  display: flex;
-}
-
-.overlay i{
-  color: black;
-  font-size: 50px;
-  margin: 15px;
-}
-.project:hover img{
-  opacity: 0.2;
-}
-.project:hover .overlay{
+.project:hover .overlay {
   opacity: 1;
 }
+
+.overlay p {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.overlay .icons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.overlay i {
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.overlay i:hover {
+  color: #66AAA0;
+}
+.btn_more_projects {
+  background-color: var(--accent-alt-color);
+  border: none;
+  transition: var(--transition-smooth);
+  padding: 10px 20px;
+}
+
+.btn_more_projects:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.btn_more_projects i {
+  margin-left: 10px;
+}
 /*Section Contact*/
+#contact{
+  padding: 40px 20px;
+}
 .contact .container{
   max-width: 1100px;
   min-height: 50px;
@@ -202,10 +275,11 @@ h1 {
   width:100%;
   display:flex;
   align-items: center;
+  
 }
 
 .contact .section-description{
-  color: white;
+  color: #f9f9f9;
   font-size: 1.2rem;
 }
 
@@ -228,7 +302,7 @@ h1 {
 }
 
 .contact button:hover{
-  background-color: white;
+  background-color: #f9f9f9;
   color:black;
 }
 .contact button:hover i{
