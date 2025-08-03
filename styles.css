@@ -6,16 +6,49 @@
   --text-dark: #333;
   --text-light: #fff;
 }
+/* Navbar Mejorado */
+.custom-navbar {
+  background-color: var(--secondary-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: none;
+}
 
-.navbar {
-  transition: all 0.3s ease-in-out;
-  background-color: #343a40;
-  height: 7%;
+.custom-navbar.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-.navbar.scrolled {
-  background-color: #343a40; /* Oscuro */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.2s ease;
 }
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-light);
+  font-size: 1rem;
+  padding: 8px 14px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.brand-name {
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 /* Añade un margen superior al cuerpo para evitar que el contenido se solape con el navbar */
 /*General*/
 section {
@@ -26,9 +59,9 @@ section {
 }
 
 .section-title {
- font-size: 2rem;
- padding: 15px 0;
- font-family: serif;
+  font-size: 2rem;
+  padding: 15px 0;
+  font-family: serif;
 }
 
 h1 {
@@ -40,17 +73,15 @@ h1 {
   font-size: 1.2rem;
 }
 
-.section-description{
+.section-description {
   font-size: 1.2rem;
   color: #584e4e;
 }
 
-
-
-.dark-text{
+.dark-text {
   color: black;
 }
-.white-text{
+.white-text {
   color: white;
 }
 
@@ -71,45 +102,98 @@ h1 {
 }
 
 /*Section Hero*/
-.hero{
+/* Section Hero */
+.hero {
   background-color: #f5f6f7;
-  min-height: 450px;
+  padding: 60px 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
-.hero-principal{
-  padding: 3rem; 
+.hero-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.hero-principal h2{
-  font-size: 1.5rem;
-  color: #615151;
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
 }
+
+.hero-title .highlight {
+  color: #007bff; /* Azul moderno Bootstrap */
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 400;
+}
+
 .hero-imagen-desarrollador {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  margin: 20px;
-  object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/*Section About me*/
-
-.about-me{
- height: 500px;
- padding: 10px;
+.hero-imagen-desarrollador:hover {
+  transform: scale(1.05);
 }
 
-.about-me .container{
+.hero-inferior-imagen {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Section About Me */
+.about-me {
+  padding: 60px 20px;
+
+  color: #f5f5f5;
+}
+
+.about-me .container {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  max-width: 600px;
+}
+
+.about-me .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.about-me .section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.about-me strong {
+  color: #ffd369;
+  font-weight: 600;
 }
 
 /*Section Experience*/
-.experience{
+.experience {
   padding: 40px 40px 60px 40px;
 }
-.experience .column{
+.experience .column {
   padding: 20px;
   border: 2px solid #8080804d;
   display: flex;
@@ -119,28 +203,35 @@ h1 {
   transition: all 0.3s ease-in;
 }
 
-.experience .column:hover{
+.experience .column:hover {
   color: white;
   background-color: #1b1b32;
 }
 
-.title-experience{
+.title-experience {
   font-size: 25px;
   font-weight: bold;
   margin: 10px 0;
 }
-
-.badges-container{
- font-size: 20px;
- font-weight: bold;
- margin: 10px 0;
+.experience-list {
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #444;
 }
 
-.badge{
+.badges-container {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badge {
   margin: 5px;
-
 }
-.experience i{
+.experience i {
   font-size: 2.5rem;
   color: #f5f6f7;
   background-color: #1b1b32;
@@ -149,6 +240,11 @@ h1 {
 }
 /*Section Projects*/
 /* Estilos para figcaption */
+
+#projects {
+  padding: 60px 20px 300px 20px;
+  background-color: #f5f6f7;
+}
 figcaption {
   width: 100%; /* Ocupa todo el ancho del contenedor */
   height: 100%; /* Altura fija */
@@ -164,10 +260,9 @@ figcaption {
   border-radius: 10px; /* Bordes redondeados */
   box-sizing: border-box; /* Incluye padding en el tamaño total */
 }
+
 .recent-projects {
-  padding: 60px 20px;
-  background-color: white;
-  margin-bottom: 200px;
+  padding: 60px 20px 400px 20px; /* top, right, bottom, left */
 }
 
 .recent-projects .section-title {
@@ -185,7 +280,7 @@ figcaption {
 .project img {
   width: 100%;
   height: 200px;
-  object-fit:fill;
+  object-fit: fill;
 }
 .recent-projects .container {
   padding-top: 40px;
@@ -205,7 +300,7 @@ figcaption {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.overlay{
+.overlay {
   transition: all 0.3s ease;
   opacity: 0;
   position: absolute;
@@ -222,7 +317,6 @@ figcaption {
 .overlay p {
   font-size: 1.5rem;
   font-weight: bold;
-
 }
 
 .overlay .icons-container {
@@ -237,10 +331,10 @@ figcaption {
 }
 
 .overlay i:hover {
-  color: #66AAA0;
+  color: #66aaa0;
 }
 .btn_more_projects {
-  background-color: var(--accent-alt-color);
+  background-color: #4cbf3d !important;
   border: none;
   transition: var(--transition-smooth);
   padding: 10px 20px;
@@ -255,35 +349,34 @@ figcaption {
   margin-left: 10px;
 }
 /*Section Contact*/
-#contact{
+#contact {
   padding: 40px 20px;
 }
-.contact .container{
+.contact .container {
   max-width: 1100px;
   min-height: 50px;
   padding: 20px;
 }
 
-.contact .rectangle{
+.contact .rectangle {
   margin-top: -10rem;
-  background-color: rgb(13,110,253);
+  background-color: rgb(13, 110, 253);
   border-radius: 10px;
   box-shadow: 0px 1px 4px 1px white;
 }
 
-.contact .row{
-  width:100%;
-  display:flex;
+.contact .row {
+  width: 100%;
+  display: flex;
   align-items: center;
-  
 }
 
-.contact .section-description{
+.contact .section-description {
   color: #f9f9f9;
   font-size: 1.2rem;
 }
 
-.contact button{
+.contact button {
   color: white;
   font-weight: bold;
   background-color: transparent;
@@ -295,38 +388,43 @@ figcaption {
   transition: all 0.2s ease-in-out;
 }
 
-.contact button i{
+.contact button i {
   color: white;
   font-size: 1.3rem;
   transition: all 0.2s ease-in-out;
 }
 
-.contact button:hover{
+.contact button:hover {
   background-color: #f9f9f9;
-  color:black;
+  color: black;
 }
-.contact button:hover i{
-  color:black;
+.contact button:hover i {
+  color: black;
 }
 
 /*Seccion footer*/
-footer{
+footer {
   min-height: 250px;
 }
-.footer-logo{
+.footer-logo {
   height: 80px;
   width: 80px;
   margin: 0px;
 }
 
-.footer-text{
+.footer-text {
   font-size: 1.5rem;
   padding: 20px;
   margin-bottom: 30px;
-
 }
 
-.icons-social-media a{
+.footer-subtext {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.icons-social-media a {
   width: 50px;
   height: 50px;
   display: flex;
@@ -339,20 +437,20 @@ footer{
   transition: all 0.2s ease-in;
 }
 
-.icons-social-media i{
+.icons-social-media i {
   color: white;
   font-size: 1.5rem;
   transition: all 0.2s ease-in;
 }
-.icons-social-media a:hover{
+.icons-social-media a:hover {
   background-color: white;
-  border: 2px solid rgb(13,110,253);
+  border: 2px solid rgb(13, 110, 253);
 }
 
-.icons-social-media a:hover i{
-  color: black
+.icons-social-media a:hover i {
+  color: black;
 }
-.author-rights{
+.author-rights {
   font-size: 1.2rem;
   color: white;
   padding: 20px;
@@ -367,16 +465,16 @@ footer{
 }
 
 @media screen and (min-width: 700px) {
-  .hero-inferior-imagen{
+  .hero-inferior-imagen {
     max-height: 400px;
   }
 }
 
 @media screen and (max-width: 400px) {
- .overlay p{
-   font-size: 18px;
+  .overlay p {
+    font-size: 18px;
   }
-  .overlay i{
+  .overlay i {
     font-size: 40px;
   }
 }
