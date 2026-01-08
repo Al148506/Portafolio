@@ -99,19 +99,34 @@
           <img
             class="hero-imagen-desarrollador"
             src="images/Foto_CV.jpg"
-            alt="Profile photo of Alejandro Castaneda"
+            alt="Profile photo of Alejandro Castaneda Garcia"
           />
         </div>
+
         <h1 class="hero-title">
-          Hello, I'm <span class="highlight">Alejandro Castaneda Garcia</span>.
+          Hi, I’m <span class="highlight">Alejandro Castaneda Garcia</span>
         </h1>
-        <h2 class="hero-subtitle">Programmer specialized in web development</h2>
-      </div>      
+
+        <h2 class="hero-subtitle">
+          Full-Stack Web Developer specializing in
+          <strong>ASP.NET</strong> & modern web technologies
+        </h2>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-dark btn-lg me-3">
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline-dark btn-lg">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
       <div class="hero-inferior">
         <img
           class="hero-inferior-imagen img-fluid"
           src="images/hero-inferior-v3.png"
-          alt="Monitor, laptops and programming language logos"
+          alt="Development workspace illustration"
         />
       </div>
     </section>
@@ -121,20 +136,27 @@
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <p class="section-text">
-          Hi! I'm <strong>Alejandro Castaneda Garcia</strong>, a backend
-          developer experienced in <strong>ASP.NET</strong>,
-          <strong>SQL Server</strong>, and <strong>REST APIs</strong>. While my
-          main focus is backend development, I also have experience building
-          complete applications with <strong>Angular</strong>, and I'm familiar
-          with essential frontend tools like <strong>HTML</strong>,
-          <strong>CSS</strong>, <strong>JavaScript</strong>, and
-          <strong>Bootstrap</strong> to create functional interfaces.
+          Hi! I’m <strong>Alejandro Castaneda Garcia</strong>, a backend-focused
+          developer with hands-on experience building web applications using
+          <strong>ASP.NET</strong>, <strong>SQL Server</strong>, and
+          <strong>RESTful APIs</strong>. I enjoy designing clean, scalable
+          backend solutions that solve real problems.
         </p>
 
         <p class="section-text">
-          This portfolio showcases personal projects where I solve real-world
-          problems using technology. I’m eager to find new opportunities to grow
-          professionally and contribute with innovative solutions.
+          While my main strength is backend development, I also have experience
+          delivering complete full-stack applications using
+          <strong>React</strong> and <strong>Angular</strong>, along with
+          <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong>, and <strong>Bootstrap</strong> to build
+          functional and user-friendly interfaces.
+        </p>
+
+        <p class="section-text">
+          This portfolio showcases personal projects where I apply my technical
+          skills to real-world scenarios. I’m motivated to keep learning, grow
+          professionally, and contribute to teams that value clean code and
+          continuous improvement.
         </p>
       </div>
     </section>
@@ -153,7 +175,7 @@
             <ul class="experience-list">
               <li>Developed and maintained ASP.NET MVC system.</li>
               <li>Provided technical support and user documentation.</li>
-              <li>Collaborated using GitHub and Trello.</li>
+              <li>Collaborated with the team using GitHub and Trello.</li>
             </ul>
             <div class="badges-container">
               <span class="badge bg-primary">ASP.NET MVC</span>
@@ -167,15 +189,15 @@
             <i class="bi bi-mortarboard-fill"></i>
             <p class="title-experience">Education</p>
             <p>
-              Bachelor's and M.Sc. in CS & IT<br />Universidad Autónoma de
+              Bachelor's & M.Sc. in CS & IT<br />Universidad Autonoma de
               Aguascalientes
             </p>
             <ul class="experience-list">
-              <li>B.Sc. Graduated: Dec 2021</li>
-              <li>M.Sc. expected: Dec 2024</li>
+              <li>B.Sc. Graduated: Dec. 2021</li>
+              <li>M.Sc. Graduated: June 2024</li>
             </ul>
             <div class="badges-container">
-              <span class="badge bg-primary">University Education</span>
+              <span class="badge bg-primary">Computer Science</span>
               <span class="badge bg-primary">Academic Research</span>
             </div>
           </div>
@@ -189,8 +211,8 @@
                 <strong>Backend:</strong> C#, ASP.NET MVC, REST API, Python
               </li>
               <li>
-                <strong>Frontend:</strong> Angular, HTML, CSS, JavaScript,
-                Bootstrap
+                <strong>Frontend:</strong> React, Angular, HTML, CSS,
+                JavaScript, Bootstrap
               </li>
               <li><strong>Databases:</strong> SQL Server, SQLite, MySQL</li>
               <li>
@@ -202,9 +224,7 @@
               <span class="badge bg-primary">C#</span>
               <span class="badge bg-primary">ASP.NET</span>
               <span class="badge bg-primary">SQL Server</span>
-              <span class="badge bg-primary">Angular</span>
-              <span class="badge bg-primary">Docker</span>
-              <span class="badge bg-primary">Azure</span>
+              <span class="badge bg-primary">React</span>
             </div>
           </div>
         </div>
@@ -212,124 +232,184 @@
     </section>
 
     <!-- Seccion Proyectos -->
-    <section
-      id="projects"
-      class="recent-projects light-section d-flex flex-column"
-    >
-      <h2 class="section-title dark-text">Recent Projects</h2>
-      <h3 class="section-description">
-        These are some of the applications I've built recently
-      </h3>
+    <section id="projects" class="projects-section light-section py-5">
+      <div class="container text-center">
+        <h2 class="section-title dark-text">Recent Projects</h2>
+        <p class="section-description mb-5">
+          Selected projects that showcase my experience in backend and
+          full-stack development
+        </p>
 
-      <div class="container projects-grid text-center">
-        <div class="row projects-grid">
-          <!-- Proyecto 1 -->
-          <div class="column col-12 col-md-6 col-lg-3">
-            <div class="project">
-              <figure class="figure">
-                <img src="images/InventoryPage.png" alt="Inventory System" />
-                <figcaption class="overlay">
-                  <p class="project-title">Inventory System</p>
-                  <!--<p class="project-desc">Web app for inventory control with user roles and PDF reports.</p>-->
-                  <div class="icons-container">
+        <div
+          id="projectsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Project 1 -->
+            <div class="carousel-item active">
+              <div class="project-slide">
+                <img
+                  src="images/videogameStore.png"
+                  class="project-image"
+                  alt="VideogameStore"
+                />
+                <div class="project-content">
+                  <h3>VideogameStore</h3>
+                  <p>
+                    Full-stack ecommerce platform built with ASP.NET, JWT
+                    authentication, Stripe payments and Azure deployment.
+                  </p>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/Al148506/GameStore"
+                      target="_blank"
+                      class="btn btn-outline-dark btn-sm"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a
+                      href="https://videogamestoreacg.web.app/"
+                      target="_blank"
+                      class="btn btn-dark btn-sm"
+                    >
+                      <i class="bi bi-eye"></i> Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="carousel-item">
+              <div class="project-slide">
+                <img
+                  src="images/InventoryPage.png"
+                  class="project-image"
+                  alt="Inventory System"
+                />
+                <div class="project-content">
+                  <h3>Inventory System</h3>
+                  <p>
+                    Internal inventory management system with role-based access,
+                    SQL Server and report generation.
+                  </p>
+                  <div class="project-links">
                     <a
                       href="https://github.com/Al148506/InventorySystem"
                       target="_blank"
-                      ><i class="bi bi-github"></i
-                    ></a>
+                      class="btn btn-outline-dark btn-sm"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
                     <a
                       href="https://inventorysystemacg.azurewebsites.net/"
                       target="_blank"
-                      ><i class="bi bi-eye"></i
-                    ></a>
+                      class="btn btn-dark btn-sm"
+                    >
+                      <i class="bi bi-eye"></i> Live Demo
+                    </a>
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!-- Proyecto 2 -->
-          <div class="column col-12 col-md-6 col-lg-3">
-            <div class="project">
-              <figure class="figure">
-                <img src="images/ConversationLuke.png" alt="Chat AI System" />
-                <figcaption class="overlay">
-                  <p class="project-title">Chat AI System</p>
-                  <!--<p class="project-desc">Roleplay chat with memory, using AI and REST APIs.</p>-->
-                  <div class="icons-container">
+            <!-- Project 3 -->
+            <div class="carousel-item">
+              <div class="project-slide">
+                <img
+                  src="images/ConversationLuke.png"
+                  class="project-image"
+                  alt="Chat AI System"
+                />
+                <div class="project-content">
+                  <h3>Chat AI System</h3>
+                  <p>
+                    Role-play chat application with AI-generated responses,
+                    memory handling and REST API integration.
+                  </p>
+                  <div class="project-links">
                     <a
                       href="https://github.com/Al148506/ChatAISystem"
                       target="_blank"
-                      ><i class="bi bi-github"></i
-                    ></a>
+                      class="btn btn-outline-dark btn-sm"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
                     <a
                       href="https://chataisystemacg.azurewebsites.net/"
                       target="_blank"
-                      ><i class="bi bi-eye"></i
-                    ></a>
+                      class="btn btn-dark btn-sm"
+                    >
+                      <i class="bi bi-eye"></i> Live Demo
+                    </a>
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!-- Proyecto 3 -->
-          <div class="column col-12 col-md-6 col-lg-3">
-            <div class="project">
-              <figure class="figure">
-                <img src="images/Resort.png" alt="Vida Vacations Project" />
-                <figcaption class="overlay">
-                  <p class="project-title">Vida Vacations Project</p>
-                  <!--<p class="project-desc">Resort landing page with responsive layout and animations.</p>-->
-                  <div class="icons-container">
-                    <a
-                      href="https://github.com/Al148506/VidaVacationsProject"
-                      target="_blank"
-                      ><i class="bi bi-github"></i
-                    ></a>
-                    <a
-                      href="https://al148506.github.io/VidaVacationsProject/"
-                      target="_blank"
-                      ><i class="bi bi-eye"></i
-                    ></a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <!-- Proyecto 4 -->
-          <div class="column col-12 col-md-6 col-lg-3">
-            <div class="project">
-              <figure class="figure">
-                <img src="images/Movies.png" alt="Cinema Management System" />
-                <figcaption class="overlay">
-                  <p class="project-title">Cinema Management System</p>
-                  <!--<p class="project-desc">Cinema system enables users to manage movies, actors, genres, cinemas, and users.</p>-->
-                  <div class="icons-container">
+            <!-- Project 4 -->
+            <div class="carousel-item">
+              <div class="project-slide">
+                <img
+                  src="images/Movies.png"
+                  class="project-image"
+                  alt="Cinema Management System"
+                />
+                <div class="project-content">
+                  <h3>Cinema Management System</h3>
+                  <p>
+                    Movie management platform built with Angular and REST APIs
+                    for managing movies, actors and cinemas.
+                  </p>
+                  <div class="project-links">
                     <a
                       href="https://github.com/Al148506/MoviesAngular"
                       target="_blank"
-                      ><i class="bi bi-github"></i
-                    ></a>
-                    <a href="https://moviesangularacg.web.app/" target="_blank"
-                      ><i class="bi bi-eye"></i
-                    ></a>
+                      class="btn btn-outline-dark btn-sm"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a
+                      href="https://moviesangularacg.web.app/"
+                      target="_blank"
+                      class="btn btn-dark btn-sm"
+                    >
+                      <i class="bi bi-eye"></i> Live Demo
+                    </a>
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Botón Más Proyectos -->
-      <div class="text-center mt-4">
-        <a href="https://github.com/Al148506" target="_blank">
-          <button class="btn btn_more_projects">
-            View More Projects <i class="bi bi-arrow-right-circle-fill"></i>
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#projectsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
           </button>
-        </a>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#projectsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <!-- More projects -->
+        <div class="text-center mt-5">
+          <a href="https://github.com/Al148506" target="_blank">
+            <button class="btn btn_more_projects">
+              View More Projects <i class="bi bi-arrow-right-circle-fill"></i>
+            </button>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -400,7 +480,7 @@
         </a>
       </div>
 
-      <div class="author-rights mt-4">© 2025 Alejandro Castaneda Garcia</div>
+      <div class="author-rights mt-4">© 2026 Alejandro Castaneda Garcia</div>
     </footer>
 
     <script
