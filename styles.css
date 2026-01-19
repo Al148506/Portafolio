@@ -305,11 +305,12 @@ h1 {
   border: none;
   transition: var(--transition-smooth);
   padding: 10px 20px;
+  color: white !important;
 }
 
 .btn_more_projects:hover {
   background-color: #3aa32e !important;
-  color: white !important;
+  
 }
 
 .btn_more_projects i {
@@ -477,7 +478,7 @@ footer {
 /* Contenedor de los botones */
 .carousel-control-prev,
 .carousel-control-next {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(135deg, #000000 0%, #000000 100%) !important;
   width: 55px;
   height: 55px;
   border-radius: 12px;
