@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
   <head>
     <!-- Metadatos -->
     <meta charset="UTF-8" />
@@ -65,24 +65,49 @@
         <div class="collapse navbar-collapse" id="navbar-toggler">
           <ul class="navbar-nav ms-auto d-flex align-items-center gap-2">
             <li class="nav-item">
-              <a class="nav-link" href="#introduction">
+              <a
+                class="nav-link"
+                href="#introduction"
+                data-i18n="nav.introduction"
+              >
                 <i class="fas fa-user me-1"></i>Introduction
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-me">
+              <a class="nav-link" href="#about-me" data-i18n="nav.about">
                 <i class="fas fa-user me-1"></i>About Me
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">
+              <a class="nav-link" href="#projects" data-i18n="nav.projects">
                 <i class="fas fa-laptop-code me-1"></i>Projects
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">
+              <a class="nav-link" href="#contact" data-i18n="nav.contact">
                 <i class="fas fa-envelope me-1"></i>Contact
               </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                🌐
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button class="dropdown-item" onclick="setLanguage('en')">
+                    English
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" onclick="setLanguage('es')">
+                    Español
+                  </button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -102,21 +127,29 @@
             alt="Profile photo of Alejandro Castaneda Garcia"
           />
         </div>
-
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-i18n="hero.title">
           Hi, I’m <span class="highlight">Alejandro Castaneda Garcia</span>
         </h1>
 
-        <h2 class="hero-subtitle">
+        <h2 class="hero-subtitle" data-i18n="hero.subtitle">
           Full-Stack Web Developer specializing in
           <strong>ASP.NET</strong> & modern web technologies
         </h2>
 
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-dark btn-lg me-3">
+          <a
+            href="#projects"
+            class="btn btn-dark btn-lg me-3"
+            data-i18n="hero.viewProjects"
+          >
             View Projects
           </a>
-          <a href="#contact" class="btn btn-outline-dark btn-lg">
+
+          <a
+            href="#contact"
+            class="btn btn-outline-dark btn-lg"
+            data-i18n="hero.contactMe"
+          >
             Contact Me
           </a>
         </div>
@@ -134,8 +167,8 @@
     <!-- Sección About Me -->
     <section id="about-me" class="about-me dark-section">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-text">
+        <h2 class="section-title" data-i18n="about.title">About Me</h2>
+        <p class="section-text" data-i18n="about.p1">
           Hi! I’m <strong>Alejandro Castaneda Garcia</strong>, a backend-focused
           developer with hands-on experience building web applications using
           <strong>ASP.NET</strong>, <strong>SQL Server</strong>, and
@@ -143,7 +176,7 @@
           backend solutions that solve real problems.
         </p>
 
-        <p class="section-text">
+        <p class="section-text" data-i18n="about.p2">
           While my main strength is backend development, I also have experience
           delivering complete full-stack applications using
           <strong>React</strong> and <strong>Angular</strong>, along with
@@ -152,7 +185,7 @@
           functional and user-friendly interfaces.
         </p>
 
-        <p class="section-text">
+        <p class="section-text" data-i18n="about.p3">
           This portfolio showcases personal projects where I apply my technical
           skills to real-world scenarios. I’m motivated to keep learning, grow
           professionally, and contribute to teams that value clean code and
@@ -160,23 +193,33 @@
         </p>
       </div>
     </section>
+
     <!-- Sección Experiencia -->
+    <!-- Experience Section -->
     <section class="experience light-section">
       <div class="container text-center">
         <div class="row">
-          <!-- Experiencia Profesional -->
+          <!-- Professional Experience -->
           <div class="column col-12 col-md-4">
             <i class="bi bi-briefcase-fill"></i>
-            <p class="title-experience">Professional Experience</p>
-            <p>
-              <strong>IT Intern</strong><br />AEROCAR EXPRESS (Feb 2024 - Aug
-              2024)
+
+            <p class="title-experience" data-i18n="experience.professional">
+              Professional Experience
             </p>
+
+            <p>
+              <strong data-i18n="experience.role">IT Intern</strong><br />
+              <span data-i18n="experience.company">
+                AEROCAR EXPRESS (Feb 2024 - Aug 2024)
+              </span>
+            </p>
+
             <ul class="experience-list">
-              <li>Developed and maintained ASP.NET MVC system.</li>
-              <li>Provided technical support and user documentation.</li>
-              <li>Collaborated with the team using GitHub and Trello.</li>
+              <li data-i18n="experience.exp1"></li>
+              <li data-i18n="experience.exp2"></li>
+              <li data-i18n="experience.exp3"></li>
             </ul>
+
             <div class="badges-container">
               <span class="badge bg-primary">ASP.NET MVC</span>
               <span class="badge bg-primary">GitHub</span>
@@ -184,42 +227,62 @@
             </div>
           </div>
 
-          <!-- Formación Académica -->
+          <!-- Education -->
           <div class="column col-12 col-md-4">
             <i class="bi bi-mortarboard-fill"></i>
-            <p class="title-experience">Education</p>
-            <p>
-              Bachelor's & M.Sc. in CS & IT<br />Universidad Autonoma de
-              Aguascalientes
+
+            <p class="title-experience" data-i18n="experience.education">
+              Education
             </p>
+
+            <p>
+              <span data-i18n="experience.degree">
+                Bachelor's & Master's in Computer Science & Information
+                Technology </span
+              ><br />
+              <span data-i18n="experience.university">
+                Universidad Autónoma de Aguascalientes
+              </span>
+            </p>
+
             <ul class="experience-list">
-              <li>B.Sc. Graduated: Dec. 2021</li>
-              <li>M.Sc. Graduated: June 2024</li>
+              <li data-i18n="experience.edu1"></li>
+              <li data-i18n="experience.edu2"></li>
             </ul>
+
             <div class="badges-container">
               <span class="badge bg-primary">Computer Science</span>
               <span class="badge bg-primary">Academic Research</span>
             </div>
           </div>
 
-          <!-- Habilidades Técnicas -->
+          <!-- Technical Skills -->
           <div class="column col-12 col-md-4">
             <i class="bi bi-gear-fill"></i>
-            <p class="title-experience">Technical Skills</p>
+
+            <p class="title-experience" data-i18n="experience.skills">
+              Technical Skills
+            </p>
+
             <ul class="experience-list">
               <li>
-                <strong>Backend:</strong> C#, ASP.NET MVC, REST API, Python
+                <strong data-i18n="experience.backend">Backend:</strong>
+                C#, ASP.NET MVC, REST API, Python
               </li>
               <li>
-                <strong>Frontend:</strong> React, Angular, HTML, CSS,
-                JavaScript, Bootstrap
+                <strong data-i18n="experience.frontend">Frontend:</strong>
+                React, Angular, HTML, CSS, JavaScript, Bootstrap
               </li>
-              <li><strong>Databases:</strong> SQL Server, SQLite, MySQL</li>
               <li>
-                <strong>DevOps & Tools:</strong> Docker, Git, Trello, Postman,
-                Azure
+                <strong data-i18n="experience.databases">Databases:</strong>
+                SQL Server, SQLite, MySQL
+              </li>
+              <li>
+                <strong data-i18n="experience.devops">DevOps & Tools:</strong>
+                Docker, Git, Trello, Postman, Azure
               </li>
             </ul>
+
             <div class="badges-container">
               <span class="badge bg-primary">C#</span>
               <span class="badge bg-primary">ASP.NET</span>
@@ -234,8 +297,10 @@
     <!-- Seccion Proyectos -->
     <section id="projects" class="projects-section light-section py-5">
       <div class="container text-center">
-        <h2 class="section-title dark-text">Recent Projects</h2>
-        <p class="section-description mb-5">
+        <h2 class="section-title dark-text" data-i18n="projects.title">
+          Recent Projects
+        </h2>
+        <p class="section-description mb-5" data-i18n="projects.description">
           Selected projects that showcase my experience in backend and
           full-stack development
         </p>
@@ -245,143 +310,135 @@
           class="carousel slide"
           data-bs-ride="carousel"
         >
-          <div class="carousel-inner">
-            <!-- Project 1 -->
-            <div class="carousel-item active">
-              <div class="project-slide">
-                <img
-                  src="images/videogameStore.png"
-                  class="project-image"
-                  alt="VideogameStore"
-                />
-                <div class="project-content">
-                  <h3>VideogameStore</h3>
-                  <p>
-                    Full-stack ecommerce platform built with ASP.NET, JWT
-                    authentication, Stripe payments and Azure deployment.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/Al148506/GameStore"
-                      target="_blank"
-                      class="btn btn-outline-dark btn-sm"
-                    >
-                      <i class="bi bi-github"></i> GitHub
-                    </a>
-                    <a
-                      href="https://videogamestoreacg.web.app/"
-                      target="_blank"
-                      class="btn btn-dark btn-sm"
-                    >
-                      <i class="bi bi-eye"></i> Live Demo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+           <div class="carousel-inner">
 
-            <!-- Project 2 -->
-            <div class="carousel-item">
-              <div class="project-slide">
-                <img
-                  src="images/InventoryPage.png"
-                  class="project-image"
-                  alt="Inventory System"
-                />
-                <div class="project-content">
-                  <h3>Inventory System</h3>
-                  <p>
-                    Internal inventory management system with role-based access,
-                    SQL Server and report generation.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/Al148506/InventorySystem"
-                      target="_blank"
-                      class="btn btn-outline-dark btn-sm"
-                    >
-                      <i class="bi bi-github"></i> GitHub
-                    </a>
-                    <a
-                      href="https://inventorysystemacg.azurewebsites.net/"
-                      target="_blank"
-                      class="btn btn-dark btn-sm"
-                    >
-                      <i class="bi bi-eye"></i> Live Demo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="carousel-item">
-              <div class="project-slide">
-                <img
-                  src="images/ConversationLuke.png"
-                  class="project-image"
-                  alt="Chat AI System"
-                />
-                <div class="project-content">
-                  <h3>Chat AI System</h3>
-                  <p>
-                    Role-play chat application with AI-generated responses,
-                    memory handling and REST API integration.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/Al148506/ChatAISystem"
-                      target="_blank"
-                      class="btn btn-outline-dark btn-sm"
-                    >
-                      <i class="bi bi-github"></i> GitHub
-                    </a>
-                    <a
-                      href="https://chataisystemacg.azurewebsites.net/"
-                      target="_blank"
-                      class="btn btn-dark btn-sm"
-                    >
-                      <i class="bi bi-eye"></i> Live Demo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="carousel-item">
-              <div class="project-slide">
-                <img
-                  src="images/Movies.png"
-                  class="project-image"
-                  alt="Cinema Management System"
-                />
-                <div class="project-content">
-                  <h3>Cinema Management System</h3>
-                  <p>
-                    Movie management platform built with Angular and REST APIs
-                    for managing movies, actors and cinemas.
-                  </p>
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/Al148506/MoviesAngular"
-                      target="_blank"
-                      class="btn btn-outline-dark btn-sm"
-                    >
-                      <i class="bi bi-github"></i> GitHub
-                    </a>
-                    <a
-                      href="https://moviesangularacg.web.app/"
-                      target="_blank"
-                      class="btn btn-dark btn-sm"
-                    >
-                      <i class="bi bi-eye"></i> Live Demo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!-- Project 1 -->
+    <div class="carousel-item active">
+      <div class="project-slide">
+        <img
+          src="images/videogameStore.png"
+          class="project-image"
+          alt="VideogameStore"
+        />
+        <div class="project-content">
+          <h3>VideogameStore</h3>
+          <p data-i18n="projects.videogameStore.desc"></p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Al148506/GameStore"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm"
+            >
+              <i class="bi bi-github"></i> GitHub
+            </a>
+            <a
+              href="https://videogamestoreacg.web.app/"
+              target="_blank"
+              class="btn btn-dark btn-sm"
+            >
+              <i class="bi bi-eye"></i>
+              <span data-i18n="projects.liveDemo">Live Demo</span>
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="carousel-item">
+      <div class="project-slide">
+        <img
+          src="images/InventoryPage.png"
+          class="project-image"
+          alt="Inventory System"
+        />
+        <div class="project-content">
+          <h3>Inventory System</h3>
+          <p data-i18n="projects.inventory.desc"></p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Al148506/InventorySystem"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm"
+            >
+              <i class="bi bi-github"></i> GitHub
+            </a>
+            <a
+              href="https://inventorysystemacg.azurewebsites.net/"
+              target="_blank"
+              class="btn btn-dark btn-sm"
+            >
+              <i class="bi bi-eye"></i>
+              <span data-i18n="projects.liveDemo">Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="carousel-item">
+      <div class="project-slide">
+        <img
+          src="images/ConversationLuke.png"
+          class="project-image"
+          alt="Chat AI System"
+        />
+        <div class="project-content">
+          <h3>Chat AI System</h3>
+          <p data-i18n="projects.chatAI.desc"></p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Al148506/ChatAISystem"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm"
+            >
+              <i class="bi bi-github"></i> GitHub
+            </a>
+            <a
+              href="https://chataisystemacg.azurewebsites.net/"
+              target="_blank"
+              class="btn btn-dark btn-sm"
+            >
+              <i class="bi bi-eye"></i>
+              <span data-i18n="projects.liveDemo">Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="carousel-item">
+      <div class="project-slide">
+        <img
+          src="images/Movies.png"
+          class="project-image"
+          alt="Cinema Management System"
+        />
+        <div class="project-content">
+          <h3>Cinema Management System</h3>
+          <p data-i18n="projects.cinema.desc"></p>
+          <div class="project-links">
+            <a
+              href="https://github.com/Al148506/MoviesAngular"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm"
+            >
+              <i class="bi bi-github"></i> GitHub
+            </a>
+            <a
+              href="https://moviesangularacg.web.app/"
+              target="_blank"
+              class="btn btn-dark btn-sm"
+            >
+              <i class="bi bi-eye"></i>
+              <span data-i18n="projects.liveDemo">Live Demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
           <!-- Controls -->
           <button
@@ -405,7 +462,7 @@
         <!-- More projects -->
         <div class="text-center mt-5">
           <a href="https://github.com/Al148506" target="_blank">
-            <button class="btn btn_more_projects">
+            <button class="btn btn_more_projects" data-i18n="projects.more">
               View More Projects <i class="bi bi-arrow-right-circle-fill"></i>
             </button>
           </a>
@@ -420,14 +477,22 @@
           class="container text-center rectangle d-flex justify-content-evenly"
         >
           <div class="row">
-            <div class="col-12 col-md-4 section-title">Let's talk!</div>
-            <div class="col-12 col-md-4 section-description">
+            <div
+              class="col-12 col-md-4 section-title"
+              data-i18n="contact.title"
+            >
+              Let's talk!
+            </div>
+            <div
+              class="col-12 col-md-4 section-description"
+              data-i18n="contact.description"
+            >
               Contact me to start your web development project and turn your
               idea into reality.
             </div>
             <div class="col-12 col-md-4">
               <a href="mailto:al148506@hotmail.com">
-                <button type="button">
+                <button type="button" data-i18n="contact.button">
                   Contact
                   <i class="bi bi-envelope-at-fill"></i>
                 </button>
@@ -447,11 +512,13 @@
         alt="Portfolio Logo"
       />
 
-      <p class="footer-text">
+      <p class="footer-text" data-i18n="footer.text">
         I learned to program to bring my ideas to life. I'm passionate about
         technology and always eager for new challenges.
       </p>
-      <p class="footer-subtext">Let's create something amazing together!</p>
+      <p class="footer-subtext" data-i18n="footer.subtext">
+        Let's create something amazing together!
+      </p>
 
       <!-- Redes sociales -->
       <div
@@ -488,5 +555,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="/i18n/lang.js"></script>
+    <script src="i18n/i18n.js"></script>
   </body>
 </html>
